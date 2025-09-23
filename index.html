@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alka Babu </title>
+  <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/024/544/536/non_2x/letter-abk-logo-icon-design-vector.jpg" type="image/png" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-ZWLg3hj6b0R+vQTCN1QAbFk+4Z7XYE0sY98P1hKHLVi+0EZ4TJzPKBLNwr1Yhx/Nw3LgRyqL+k0G+3aWbso3Dw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    body {
+      background-color: #f8f9fa; /* light gray background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-top: 90px; /* space for fixed header */
+    }
+
+    header {
+      background: linear-gradient(to right, #002f4b, #005f6b);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /* stay above content */
+    }
+
+    header h1 {
+      font-weight: 600;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: 500;
+    }
+
+    section {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      margin-top: 30px;
+      padding: 30px;
+    }
+
+    footer {
+      background-color: #002f4b;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      color: #005f6b;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="text-white py-3">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Logo + Title -->
+        <div class="col-md-6 d-flex align-items-center">
+          <img 
+            src="https://static.vecteezy.com/system/resources/previews/024/544/536/non_2x/letter-abk-logo-icon-design-vector.jpg" 
+            alt="ABK Logo"
+            style="width: 60px; height: auto; margin-right: 10px;">
+          <h1 class="h4 mb-0">Alka Babu</h1>
+        </div>
+
+        <!-- Navigation -->
+        <div class="col-md-6">
+          <nav class="navbar navbar-expand-md navbar-dark justify-content-end">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#service-section">Service</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#experience-section">Experience</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contactme-section">Contact Me</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Left: Image -->
+        <div class="col-md-6 text-center mb-4 mb-md-0">
+          <img 
+            src="https://static.vecteezy.com/system/resources/previews/024/544/536/non_2x/letter-abk-logo-icon-design-vector.jpg"
+            alt="ABK Logo"
+            class="img-fluid rounded-circle"
+            style="max-height: 250px;">
+        </div>
+
+        <!-- Right: About Text -->
+        <div class="col-md-6">
+          <h2 class="mb-3">About Us</h2>
+          <p>
+            <strong>"Today's dedication becomes tomorrow's success"</strong><br><br>
+            I am <strong>Alka Babu</strong> from Kasaragod, Kerala. I have over 3 years of experience in SEO, 
+            initially working with NIMN SEO. Later, I transitioned into software engineering, where I developed strong skills
+            in HTML, CSS, JavaScript, Java, Bootstrap, React, Next.js, and C. My journey in tech is driven by curiosity 
+            and passion for building modern web solutions. I continue to grow as a developer,
+            blending creativity with coding to solve real-world problems.
+          </p>
+          <a href="#" class="btn btn-info mt-3">Learn More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="p-4" id="service-section">
+    <div class="container py-5">
+      <h1 class="text-center mb-5">Services</h1>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4">
+            <i class="fa-brands fa-html5 service-icon"></i>
+            <h5 class="card-title">Web Development</h5>
+            <p class="card-text">Building responsive, fast, and interactive websites using HTML, CSS, JavaScript, Bootstrap, React, and Next.js.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4">
+            <i class="fa-brands fa-css3-alt service-icon"></i>
+            <h5 class="card-title">Software Optimization & Maintenance</h5>
+            <p class="card-text">Improving existing software for speed, security, and scalability. Providing regular updates and bug fixes to keep applications running smoothly.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4">
+            <i class="fa-brands fa-js service-icon"></i>
+            <h5 class="card-title">Custom Application Development</h5>
+            <p class="card-text">Developing tailored solutions for businesses, from e-commerce platforms to internal tools. Focusing on clean code, modular design, and maintainability.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4">
+            <h5 class="card-title">On-Page SEO Optimization</h5>
+            <p class="card-text">Ensure all pages have proper meta tags, headings, URL structure, and internal linking for better search visibility.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4">
+            <i class="fa-brands fa-react service-icon"></i>
+            <h5 class="card-title">Keyword Research & Strategy</h5>
+            <p class="card-text">Identify high-performing keywords to target the right audience effectively.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4">
+            <i class="fa-solid fa-code service-icon"></i>
+            <h5 class="card-title">Technical SEO</h5>
+            <p class="card-text">Improve website speed, mobile responsiveness, structured data, and site architecture for search engine friendliness.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section class="bg-white p-5" id="experience-section">
+    <div class="container">
+      <h1 class="text-center">Experience</h1>
+      <div class="row">
+
+        <!-- Volga Tigris -->
+        <div class="card h-100 text-center p-4">
+          <img src="https://www.volgatigris.com/public/new-assets/img/logo/logo.png"
+               class="card-img-top mx-auto d-block" 
+               alt="Volga Tigris Digital Marketing Agency Logo" 
+               style="width:120px; height:auto;">
+          <h5 class="card-title">Volga Tigris Digital Marketing Agency</h5>
+          <p class="card-text">Currently working at Volga Tigris Digital Marketing Agency, focusing mainly on SEO strategies, backlink building, and performance optimization.</p>
+        </div>
+
+        <!-- Prabisha Consulting -->
+        <div class="card h-100 text-center p-4">
+          <img src="https://prabisha.com/wp-content/uploads/2025/06/logo.png" 
+               class="card-img-top mx-auto d-block" 
+               alt="Prabisha Consulting Logo" 
+               style="width:120px; height:auto;">
+          <h5 class="card-title">Prabisha Consulting Pvt. Ltd.</h5>
+          <p class="card-text">Worked as a Search Engine Optimization Executive at Prabisha Consulting Pvt. Ltd. for 10 months, managing SEO campaigns effectively.</p>
+        </div>
+
+        <!-- Freelance SEO -->
+        <div class="card h-100 text-center p-4">
+          <img src="https://play-lh.googleusercontent.com/5zdFGXV3xyD4bH4qapoFhVH3dpsQPexoWANCNNEiuahkQ070BW3y_o1xQSwUqfs3KQ"
+               class="card-img-top mx-auto d-block" 
+               alt="Freelancer Logo" 
+               style="width:120px; height:auto;">
+          <h5 class="card-title">Freelance SEO</h5>
+          <p class="card-text">Worked as a Freelance SEO Specialist for 1 year and 2 months, delivering effective optimization strategies and digital marketing solutions.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="bg-white p-5" id="contactme-section">
+    <div class="container">
+      <h1 class="text-center">Contact Me</h1>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form class="p-4 shadow rounded bg-white">
+            <div class="form-group mb-3">
+              <label for="inputEmail4">Email</label>
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            </div>
+            <div class="form-group mb-3">
+              <label for="inputCity">City</label>
+              <input type="text" class="form-control" id="inputCity" placeholder="Enter your city">
+            </div>
+            <div class="form-group mb-4">
+              <label for="inputZip">Mobile</label>
+              <input type="text" class="form-control" id="inputZip" placeholder="Enter your mobile number">
+            </div>
+            <div style="text-align:center;">
+              <button style="background:#00CFFF; color:black; padding:10px 20px; border:none; border-radius:8px; font-size:16px; cursor:pointer;">Learn More</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer text-center" style="background-color:#002f4b; color:white; padding:30px 0;">
+    <div class="container">
+      <div class="social-icons mb-3">
+        <a href="https://www.linkedin.com/in/YOURPROFILE" target="_blank" style="display:inline-flex; align-items:center; margin:0 10px; color:white; text-decoration:none;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgAiBJo0mFu6bWkp_crjPMPpRLpRfgfY35ov_mx2aWDV5cWO3UeDjfa6c9QvYhmN4SuDc&usqp=CAU" 
+               alt="LinkedIn" style="width:24px; height:24px; margin-right:8px;"> LinkedIn
+        </a>
+        <a href="https://wa.me/YOURNUMBER?text=Hello!" target="_blank" style="display:inline-flex; align-items:center; margin:0 10px; color:white; text-decoration:none;">
+          <img src="https://t3.ftcdn.net/jpg/05/32/20/62/360_F_532206245_N1xYEHrZVIWU1ihamWwmDbh1gZWGU7Jl.jpg" 
+               alt="WhatsApp" style="width:24px; height:24px; margin-right:8px;"> WhatsApp
+        </a>
+        <a href="mailto:youremail@gmail.com" style="display:inline-flex; align-items:center; margin:0 10px; color:white; text-decoration:none;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRdnDiESe_tkye1hqzAJJg56erlIriA57BQ&s" 
+               alt="Gmail" style="width:24px; height:24px; margin-right:8px;"> Gmail
+        </a>
+      </div>
+      <div class="footer-text" style="margin-top:10px; font-size:14px;">
+        &copy; 2025 Alka. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
