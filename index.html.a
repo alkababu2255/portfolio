@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alka's Fashion Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav style="display:flex; justify-content:space-between; align-items:center; background:#00004d; padding:15px 30px; position:sticky; top:0;">
+  <div style="font-size:24px; font-weight:bold; color:rgb(255, 255, 255);">Fashion Hub</div>
+  <ul style="list-style:none; display:flex; gap:25px; margin:0; padding:0;">
+    <li><a href="index.html" style="text-decoration:none; color:rgb(255, 255, 255); padding:8px 12px;">HOME</a></li>
+    <li><a href="about.html" style="text-decoration:none; color:rgb(255, 255, 255); padding:8px 12px;">ABOUT</a></li>
+    <li><a href="collections.html" style="text-decoration:none; color:rgb(255, 255, 255); padding:8px 12px;">COLLECTIONS</a></li>
+    <li><a href="contact.html" style="text-decoration:none; color:rgb(255, 255, 255); padding:8px 12px;">CONTACT</a></li>
+  </ul>
+</nav>
+<!-- Hero Section -->
+<header class="hero" style="background-image: url('https://m.media-amazon.com/images/I/81waLxTSi8L.jpg');">
+  <div class="hero-content">
+    <h1>Welcome to Alka's Fashion Hub</h1>
+    <p>Discover the latest trends and timeless styles.</p>
+   
+  </div>
+</header>
+
+<script src="script.js"></script>
+
+<section class="about-section" style="background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20250205/pngtree-soft-pastel-floral-design-light-blue-background-image_16896113.jpg');">
+  <div class="about-content">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMzMs19epCggtR4SSCGZTMvpKbWMOiLUYbwA&s" alt="Alka" class="profile-img">
+    <div class="about-text">
+      <h1>About Me</h1>
+      <h3>Hello! I am Alka, founder of Fashion Hub. I am passionate about helping you discover your unique style with the latest trends and timeless pieces.</h3>
+    </div>
+  </div>
+</section>
+<section class="collections-section">
+  <h2>Our Collections</h2>
+  <div class="collection-grid">
+    <div class="collection-item">
+      <img src="https://i.pinimg.com/564x/23/5b/c8/235bc846da7f2c4e4da7ec8b5d4a54f0.jpg" alt="Casual">
+      <h3>Casual Wear</h3>
+    </div>
+    <div class="collection-item">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="Formal">
+      <h3>Formal Wear</h3>
+    </div>
+    <div class="collection-item">
+      <img src="https://panaxmart.com/cdn/shop/articles/Jewelry-laydown-two.jpg?v=1695801014&width=1100" alt="Accessories">
+      <h3>Accessories</h3>
+    </div>
+    <div class="collection-item">
+      <img src="https://fausto.in/cdn/shop/files/FST_FJDWC-7010_SKY_0_400x.jpg?v=1694239398=110" alt="Shoes">
+      <h3>Shoes</h3>
+    </div>
+  </div>
+</section>
+<section class="contact-section">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Name" required name="Name">
+    <input type="email" placeholder="Email" required name="Email">
+    <textarea placeholder="Message" required name="Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alka's Fashion Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #d3aeea);
+    }
+    .navbar .nav-link {
+      color: #fff !important;
+      margin-right: 20px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .navbar .nav-link:hover {
+      color: #f1c40f !important;
+    }
+    .navbar-brand {
+      color: #fff !important;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Hero */
+    .hero {
+      background: url('https://m.media-amazon.com/images/I/81waLxTSi8L.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(72, 85, 112, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+    .btn-hero {
+      padding: 12px 28px;
+      background: #f1c40f;
+      color: #000;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn-hero:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: white;
+      padding: 40px 20px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+    footer a:hover {
+      color: #f1c40f;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Fashion Hub</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container">
+    <h5 class="fw-bold mb-3">Alka's Fashion Hub</h5>
+    <p>Discover timeless fashion collections, stylish accessories, and the latest trends made for your unique style.</p>
+    <div class="mb-3">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="collections.html">Collections</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="mb-3">
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms & Conditions</a> 
+    </div>
+    <div class="mb-3">
+      <a href="#"><i class="bi bi-facebook fs-4 me-2"></i></a>
+      <a href="#"><i class="bi bi-instagram fs-4 me-2"></i></a>
+      <a href="#"><i class="bi bi-twitter fs-4"></i></a>
+    </div>
+    <p class="mb-0">&copy; 2025 Alka's Fashion Hub | All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
