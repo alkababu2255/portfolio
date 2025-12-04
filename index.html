@@ -142,31 +142,37 @@
   </div>
 </section>
 
-<!-- SERVICES SECTION -->
-<section id="services" class="bg-light">
+<!-- CONTACT SECTION -->
+<section id="contact" class="bg-light">
   <div class="container">
-    <h1 class="text-center mb-5">Services</h1>
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-4">
-        <div class="card text-center p-4">
-          <i class="fa-brands fa-html5 service-icon"></i>
-          <h5>Web Development</h5>
-          <p>Responsive websites using HTML, CSS, JS, Bootstrap, React, Next.js.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card text-center p-4">
-          <i class="fa-brands fa-js service-icon"></i>
-          <h5>Custom Software</h5>
-          <p>Building modular, scalable, and maintainable software solutions for businesses.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card text-center p-4">
-          <i class="fa-solid fa-magnifying-glass service-icon"></i>
-          <h5>SEO Optimization</h5>
-          <p>On-page & technical SEO to improve website visibility and ranking.</p>
-        </div>
+    <h1 class="text-center mb-5">Contact Me</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form action="https://formspree.io/f/mjkkjvzw" method="POST" class="p-4 shadow rounded bg-white">
+          <div class="mb-3">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <label>City</label>
+            <input type="text" name="city" class="form-control" placeholder="Your City">
+          </div>
+          <div class="mb-3">
+            <label>Mobile</label>
+            <input type="text" name="mobile" class="form-control" placeholder="Your Mobile Number" required>
+          </div>
+          <div class="mb-3">
+            <label>Message</label>
+            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-custom w-50">Send Message</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -245,4 +251,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 
