@@ -176,31 +176,38 @@
   </div>
 </section>
 
-<!-- CONTACT SECTION - ONLY ONE FORM -->
+
 <section id="contact" class="bg-light">
   <div class="container">
     <h1 class="text-center mb-5">Contact Me</h1>
     <div class="row justify-content-center">
       <div class="col-md-7">
-        <form action="mailto:alkababu2255@gmail.com" method="post" enctype="text/plain" class="p-5 shadow rounded bg-white">
+
+        <div id="thankyou-message" class="alert alert-success text-center p-4" style="display:none;">
+          <h4>Thank You!</h4>
+          <p>Your message has been sent successfully.<br>I will contact you soon </p>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contactForm" class="p-5 shadow rounded bg-white">
           <div class="row">
             <div class="col-md-6 mb-3">
-              <input type="text" name="Name" class="form-control" placeholder="Your Name" required>
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
             </div>
             <div class="col-md-6 mb-3">
-              <input type="email" name="Email" class="form-control" placeholder="Your Email" required>
+              <input type="email" name="email" class="form-control" placeholder="Your Email" required>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6 mb-3">
-              <input type="text" name="City" class="form-control" placeholder="Your City">
+              <input type="text" name="city" class="form-control" placeholder="Your City">
             </div>
             <div class="col-md-6 mb-3">
-              <input type="text" name="Mobile" class="form-control" placeholder="Mobile Number" required>
+              <input type="text" name="mobile" class="form-control" placeholder="Mobile Number" required>
             </div>
           </div>
           <div class="mb-3">
-            <textarea name="Message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
           </div>
           <div class="text-center">
             <button type="submit" class="btn btn-custom px-5">Send Message</button>
@@ -211,6 +218,33 @@
   </div>
 </section>
 
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+
+    const formData = new FormData(this);
+
+    fetch('https://formspree.io/f/mgejqpga', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        // Success → Thank you message 
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('thankyou-message').style.display = 'block';
+      } else {
+        alert('Oops! Something went wrong. Please try again.');
+      }
+    })
+    .catch(() => {
+      alert('Network error. Please check your internet connection.');
+    });
+  });
+</script>
 
 <!-- FOOTER -->
 <footer>
@@ -233,6 +267,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
