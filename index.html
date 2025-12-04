@@ -174,40 +174,43 @@
       </div>
     </div>
   </div>
-</section>
-
-
+<!-- CONTACT SECTION - Working Form to Receive at alkababu@gmail.com -->
 <section id="contact" class="bg-light">
   <div class="container">
     <h1 class="text-center mb-5">Contact Me</h1>
     <div class="row justify-content-center">
       <div class="col-md-7">
-
-        <div id="thankyou-message" class="alert alert-success text-center p-4" style="display:none;">
+        <!-- Success Message -->
+        <div id="thankyou" class="alert alert-success text-center p-4" style="display: none;">
           <h4>Thank You!</h4>
-          <p>Your message has been sent successfully.<br>I will contact you soon </p>
+          <p>Your message has been sent successfully. I'll reply soon.</p>
         </div>
-
-        <!-- Contact Form -->
-        <form action="mailto:alkababu2255@gmail.com" method="post" enctype="text/plain">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="Name" required><br><br>
-
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="Email" required><br><br>
-
-  <label for="city">City:</label>
-  <input type="text" id="city" name="City"><br><br>
-
-  <label for="mobile">Mobile:</label>
-  <input type="text" id="mobile" name="Mobile" required><br><br>
-
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="Message" rows="5" required></textarea><br><br>
-
-  <button type="submit">Send Message</button>
-</form>
-
+        
+        <!-- Form -->
+        <form id="contactForm" class="p-5 shadow rounded bg-white">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <input type="text" name="city" class="form-control" placeholder="Your City">
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="text" name="mobile" class="form-control" placeholder="Mobile Number" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-custom px-5">Send Message</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -257,6 +260,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
