@@ -9,45 +9,145 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
         integrity="sha512-ZWLg3hj6b0R+vQTCN1QAbFk+4Z7XYE0sY98P1hKHLVi+0EZ4TJzPKBLNwr1Yhx/Nw3LgRyqL+k0G+3aWbso3Dw==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <style>
+    /* General Styling */
     body {
-      background-color: #f8f9fa;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
       padding-top: 90px;
+      color: #333;
     }
+
+    /* Header */
     header {
-      background: linear-gradient(to right, #002f4b, #005f6b);
+      background: linear-gradient(90deg, #002f4b, #005f6b);
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
     }
-    header h1 { font-weight: 600; }
-    .navbar-nav .nav-link { font-weight: 500; }
-    section { background-color: #ffffff; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.05); margin-top: 30px; padding: 30px; }
-    footer { background-color: #002f4b; color: white; padding: 20px 0; text-align: center; margin-top: 50px; }
-    .service-icon { font-size: 3rem; color: #005f6b; margin-bottom: 15px; }
+    header h1 {
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      color: #fff !important;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #00cfff !important;
+    }
+
+    /* Sections */
+    section {
+      margin-top: 40px;
+      padding: 60px 0;
+    }
+    section.bg-light {
+      background-color: #f8f9fa !important;
+    }
+
+    /* Cards */
+    .card {
+      border: none;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      color: #005f6b;
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #002f4b;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      color: #00cfff;
+    }
+
+    /* Buttons */
+    .btn-custom {
+      background-color: #00CFFF;
+      color: #000;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn-custom:hover {
+      background-color: #005f6b;
+      color: #fff;
+    }
+
+    /* Form */
+    form input, form textarea {
+      border-radius: 8px;
+      box-shadow: none !important;
+    }
+
+    /* Responsive Images */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   </style>
 </head>
 <body>
 
+<?php
+$msg = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email  = $_POST['email'];
+    $city   = $_POST['city'];
+    $mobile = $_POST['mobile'];
+
+    $to = "alkababu2255@gmail.com";
+    $subject = "New Customer Contact Details";
+    $message = "New customer details received:\n\nEmail: $email\nCity: $city\nMobile: $mobile\n";
+    $headers = "From: no-reply@yourdomain.com";
+
+    if (mail($to, $subject, $message, $headers)) {
+        $msg = "Thank you! Your details have been sent successfully.";
+    } else {
+        $msg = "Error: Unable to send email.";
+    }
+}
+?>
+
 <!-- HEADER -->
-<header class="text-white py-3">
+<header class="py-3">
   <div class="container d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center">
       <img src="https://static.vecteezy.com/system/resources/previews/024/544/536/non_2x/letter-abk-logo-icon-design-vector.jpg" 
            alt="ABK Logo" style="width: 60px; margin-right:10px;">
-      <h1 class="h4 mb-0">Alka Babu</h1>
+      <h1>Alka Babu</h1>
     </div>
     <nav class="navbar navbar-expand-md navbar-dark">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#service-section">Service</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#experience-section">Experience</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#contact-section">Contact Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#service-section">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience-section">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -59,103 +159,20 @@
   <div class="container row align-items-center">
     <div class="col-md-6 text-center mb-4 mb-md-0">
       <img src="https://static.vecteezy.com/system/resources/previews/024/544/536/non_2x/letter-abk-logo-icon-design-vector.jpg" 
-           alt="ABK Logo" class="img-fluid rounded-circle" style="max-height: 250px;">
+           alt="ABK Logo" class="rounded-circle" style="max-height: 250px;">
     </div>
     <div class="col-md-6">
-      <h2 class="mb-3">About Us</h2>
-      <p>
-        <strong>"Today's dedication becomes tomorrow's success"</strong><br><br>
-        I am <strong>Alka Babu</strong> from Kasaragod, Kerala, with experience in SEO, Web Development, 
-        and Software Engineering. Skilled in HTML, CSS, JavaScript, Java, Bootstrap, React, Next.js, and C.
-      </p>
-      <a href="#" class="btn btn-info mt-3">Learn More</a>
+      <h2>About Me</h2>
+      <p><strong>"Today's dedication becomes tomorrow's success"</strong></p>
+      <p>I am <strong>Alka Babu</strong> from Kasaragod, Kerala, with experience in SEO, Web Development, 
+         and Software Engineering. Skilled in HTML, CSS, JavaScript, Java, Bootstrap, React, Next.js, and C.</p>
+      <a href="#" class="btn btn-custom mt-3">Learn More</a>
     </div>
   </div>
 </section>
 
 <!-- SERVICES SECTION -->
-<section id="service-section">
-  <div class="container py-5">
+<section id="service-section" class="bg-light">
+  <div class="container">
     <h1 class="text-center mb-5">Services</h1>
     <div class="row g-4 justify-content-center">
-      <!-- Example Service Card -->
-      <div class="col-md-4">
-        <div class="card h-100 text-center p-4">
-          <i class="fa-brands fa-html5 service-icon"></i>
-          <h5 class="card-title">Web Development</h5>
-          <p class="card-text">Responsive websites using HTML, CSS, JS, Bootstrap, React, Next.js.</p>
-        </div>
-      </div>
-      <!-- Add more cards similarly -->
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE SECTION -->
-<section id="experience-section">
-  <div class="container">
-    <h1 class="text-center">Experience</h1>
-    <div class="row g-4 justify-content-center">
-      <div class="card h-100 text-center p-4 col-md-4">
-        <img src="https://www.volgatigris.com/public/new-assets/img/logo/logo.png" 
-             alt="Volga Tigris Logo" class="card-img-top mx-auto d-block" style="width:120px;">
-        <h5 class="card-title mt-3">Volga Tigris Digital Marketing Agency</h5>
-        <p class="card-text">SEO strategies, backlink building, performance optimization.</p>
-      </div>
-      <!-- Add other experience cards similarly -->
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT FORM SECTION -->
-<section id="contact-section" class="py-5 bg-light">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form class="p-4 shadow rounded bg-white" method="POST" action="">
-          <?php if (!empty($msg)): ?>
-            <div class="alert alert-info"><?php echo $msg; ?></div>
-          <?php endif; ?>
-          <div class="form-group mb-3">
-            <label>Email</label>
-            <input type="email" class="form-control" name="email" placeholder="Email" required>
-          </div>
-          <div class="form-group mb-3">
-            <label>City</label>
-            <input type="text" class="form-control" name="city" placeholder="Enter your city" required>
-          </div>
-          <div class="form-group mb-4">
-            <label>Mobile</label>
-            <input type="text" class="form-control" name="mobile" placeholder="Enter your mobile number" required>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn" style="background:#00CFFF; color:black; border-radius:8px;">Learn More</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="social-icons mb-3">
-      <a href="https://www.linkedin.com/in/alkababu/" target="_blank" class="me-3 text-white">
-        <i class="fab fa-linkedin me-1"></i> LinkedIn
-      </a>
-      <a href="https://wa.me/918921763042" target="_blank" class="me-3 text-white">
-        <i class="fab fa-whatsapp me-1"></i> WhatsApp
-      </a>
-      <a href="mailto:alkababu2255@gmail.com" class="text-white">
-        <i class="fas fa-envelope me-1"></i> Gmail
-      </a>
-    </div>
-    <div class="footer-text mt-2">&copy; 2025 Alka. All Rights Reserved.</div>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-
