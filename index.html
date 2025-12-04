@@ -8,35 +8,89 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    body {font-family: 'Segoe UI', sans-serif; background:#f8f9fa; padding-top:90px; color:#333;}
-    header {background: linear-gradient(90deg, #002f4b, #005f6b); position:fixed; top:0; width:100%; z-index:1000; padding:15px 0;}
-    header h1 {color:#fff; margin:0; font-weight:700;}
-    .navbar-nav .nav-link {color:#fff !important; font-weight:500;}
-    .navbar-nav .nav-link:hover {color:#00cfff !important;}
-    section {padding:80px 0;}
-    .card {border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.05); transition:0.3s;}
-    .card:hover {transform:translateY(-10px);}
-    .service-icon {font-size:3.5rem; color:#005f6b;}
-    .btn-custom {background:#00CFFF; color:#000; font-weight:600; padding:12px 30px; border-radius:50px;}
-    .btn-custom:hover {background:#005f6b; color:#fff;}
-    footer {background:#002f4b; color:#fff; padding:40px 0;}
-    footer a {color:#fff; margin:0 15px; font-size:1.2rem;}
-    footer a:hover {color:#00CFFF;}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      padding-top: 90px;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #002f4b, #005f6b);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 15px 0;
+    }
+    header h1 {
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      color: #fff !important;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #00cfff !important;
+    }
+    section { padding: 80px 0; }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .service-icon {
+      font-size: 3.5rem;
+      color: #005f6b;
+      margin-bottom: 20px;
+    }
+    .btn-custom {
+      background-color: #00CFFF;
+      color: #000;
+      border-radius: 8px;
+      font-weight: 600;
+      padding: 10px 25px;
+    }
+    .btn-custom:hover {
+      background-color: #005f6b;
+      color: #fff;
+    }
+    footer {
+      background-color: #002f4b;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 15px;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+    footer a:hover { color: #00CFFF; }
+    .profile-img {
+      max-height: 280px;
+      border: 8px solid #005f6b;
+    }
   </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="container d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center">
-      <img src="https://static.vecteezy.com/system/resources/previews/024/544/536/non_2x/letter-abk-logo-icon-design-vector.jpg" alt="Logo" width="60">
-      <h1 class="ms-2">Alka Babu</h1>
+      <img src="https://static.vecteezy.com/system/resources/previews/024/544/536/non_2x/letter-abk-logo-icon-design-vector.jpg" alt="ABK Logo" style="width: 60px; margin-right: 12px;">
+      <h1>Alka Babu</h1>
     </div>
-    <nav class="navbar navbar-expand-md">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="nav">
+      <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
@@ -48,93 +102,105 @@
   </div>
 </header>
 
-<section id="about" class="bg-white">
+<!-- ABOUT / HOME SECTION -->
+<section id="about">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-5 text-center">
-        <img src="https://static.vecteezy.com/system/resources/previews/024/544/536/non_2x/letter-abk-logo-icon-design-vector.jpg" class="rounded-circle border border-5 border-primary" width="280" alt="Alka">
+      <div class="col-md-5 text-center mb-4 mb-md-0">
+        <img src="https://static.vecteezy.com/system/resources/previews/024/544/536/non_2x/letter-abk-logo-icon-design-vector.jpg" class="rounded-circle profile-img" alt="Alka Babu">
       </div>
       <div class="col-md-7">
         <h2>About Me</h2>
         <p class="lead"><strong>"Today's dedication becomes tomorrow's success"</strong></p>
-        <p>I am <strong>Alka Babu</strong> from Kasaragod, Kerala. Expert in Web Development, SEO & Software Solutions.</p>
-        <p>Skilled in: HTML, CSS, JavaScript, React, Next.js, Bootstrap, Java, C</p>
-        <a href="#contact" class="btn btn-custom">Hire Me</a>
+        <p>Hello! I am <strong>Alka Babu</strong> from Kasaragod, Kerala.</p>
+        <p>I specialize in <strong>Web Development, SEO</strong> and <strong>Software Solutions</strong>. Skilled in HTML, CSS, JavaScript, Bootstrap, React, Next.js, Java, and C.</p>
+        <p>Passionate about creating fast, responsive, and SEO-friendly websites that help businesses grow online.</p>
+        <a href="#contact" class="btn btn-custom mt-3">Get In Touch</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SERVICES SECTION -->
 <section id="services" class="bg-light">
   <div class="container">
-    <h1 class="text-center mb-5">Services</h1>
+    <h1 class="text-center mb-5">My Services</h1>
     <div class="row g-4">
-      <div class="col-md-4"><div class="card text-center p-4 h-100">
-        <i class="fa-brands fa-html5 service-icon"></i>
-        <h5>Web Development</h5>
-        <p>Responsive & modern websites</p>
-      </div></div>
-      <div class="col-md-4"><div class="card text-center p-4 h-100">
-        <i class="fa-brands fa-searchengin service-icon"></i>
-        <h5>SEO Optimization</h5>
-        <p>Rank higher on Google</p>
-      </div></div>
-      <div class="col-md-4"><div class="card text-center p-4 h-100">
-        <i class="fa-solid fa-code service-icon"></i>
-        <h5>Custom Software</h5>
-        <p>Tailored business solutions</p>
-      </div></div>
+      <div class="col-md-4">
+        <div class="card text-center p-4 h-100">
+          <i class="fa-brands fa-html5 service-icon"></i>
+          <h5>Web Development</h5>
+          <p>Modern, responsive websites using HTML, CSS, JavaScript, Bootstrap, React & Next.js.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-4 h-100">
+          <i class="fa-brands fa-searchengin service-icon"></i>
+          <h5>SEO Optimization</h5>
+          <p>On-page, off-page & technical SEO to rank higher on Google and increase traffic.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-4 h-100">
+          <i class="fa-solid fa-code service-icon"></i>
+          <h5>Custom Software</h5>
+          <p>Scalable and efficient software solutions tailored to your business needs.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- EXPERIENCE SECTION -->
 <section id="experience">
   <div class="container">
     <h1 class="text-center mb-5">Experience</h1>
     <div class="row g-4 justify-content-center">
       <div class="col-md-5">
         <div class="card text-center p-4">
-          <img src="https://www.volgatigris.com/public/new-assets/img/logo/logo.png" width="120" class="mb-3" alt="Volga Tigris">
+          <img src="https://www.volgatigris.com/public/new-assets/img/logo/logo.png" style="width:130px;" class="mx-auto d-block mb-3" alt="Volga Tigris">
           <h5>Volga Tigris Digital Marketing</h5>
-          <p>SEO Specialist</p>
+          <p class="mb-0">SEO Specialist</p>
+          <small class="text-muted">Backlink building · Keyword research · Site optimization</small>
         </div>
       </div>
       <div class="col-md-5">
         <div class="card text-center p-4">
-          <img src="https://prabisha.com/wp-content/uploads/2025/06/logo.png" width="120" class="mb-3" alt="Prabisha">
-          <h5>Prabisha Consulting Pvt Ltd</h5>
-          <p>SEO Executive</p>
+          <img src="https://prabisha.com/wp-content/uploads/2025/06/logo.png" style="width:130px;" class="mx-auto d-block mb-3" alt="Prabisha Consulting">
+          <h5>Prabisha Consulting Pvt. Ltd.</h5>
+          <p class="mb-0">SEO Executive</p>
+          <small class="text-muted">Managed multiple client campaigns successfully</small>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WORKING CONTACT FORM (HTTPS + No warning) -->
+<!-- CONTACT SECTION - ONLY ONE FORM -->
 <section id="contact" class="bg-light">
   <div class="container">
     <h1 class="text-center mb-5">Contact Me</h1>
     <div class="row justify-content-center">
-      <div class="col-md-8">
-        <form action="https://formspree.io/f/xpwaadiy" method="POST" class="p-5 bg-white rounded shadow">
+      <div class="col-md-7">
+        <form action="mailto:alkababu2255@gmail.com" method="post" enctype="text/plain" class="p-5 shadow rounded bg-white">
           <div class="row">
             <div class="col-md-6 mb-3">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              <input type="text" name="Name" class="form-control" placeholder="Your Name" required>
             </div>
             <div class="col-md-6 mb-3">
-              <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+              <input type="email" name="Email" class="form-control" placeholder="Your Email" required>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6 mb-3">
-              <input type="text" name="city" class="form-control" placeholder="City">
+              <input type="text" name="City" class="form-control" placeholder="Your City">
             </div>
             <div class="col-md-6 mb-3">
-              <input type="text" name="mobile" class="form-control" placeholder="Mobile Number" required>
+              <input type="text" name="Mobile" class="form-control" placeholder="Mobile Number" required>
             </div>
           </div>
           <div class="mb-3">
-            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            <textarea name="Message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
           </div>
           <div class="text-center">
             <button type="submit" class="btn btn-custom px-5">Send Message</button>
@@ -145,17 +211,28 @@
   </div>
 </section>
 
+
+<!-- FOOTER -->
 <footer>
-  <div class="container text-center">
-    <p>
-      <a href="https://www.linkedin.com/in/alkababu/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="https://wa.me/918921763042" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="mailto:alkababu2255@gmail.com"><i class="fas fa-envelope"></i> Gmail</a>
-    </p>
-    <p>© 2025 Alka Babu. All Rights Reserved.</p>
+  <div class="container">
+    <div class="mb-3">
+      <a href="https://www.linkedin.com/in/alkababu/" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://wa.me/918921763042" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="mailto:alkababu2255@gmail.com">
+        <i class="fas fa-envelope"></i> alkababu2255@gmail.com
+      </a>
+    </div>
+    <div>© 2025 Alka Babu. All Rights Reserved.</div>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+
